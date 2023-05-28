@@ -3,6 +3,7 @@ import { History } from '../History/History'
 
 import { useState,useEffect } from 'react'
 import { servicioCanciones } from '../services/consultarCancioens'
+import { servicioCancionesAxios } from '../services/servicioConAxios'
 
 
 
@@ -15,7 +16,7 @@ export function Home(){
 
 
     useEffect(function(){
-        servicioCanciones()
+        servicioCancionesAxios()
         .then(function(respuesta){
             console.log(respuesta)
             setDatos(respuesta)
@@ -29,7 +30,7 @@ export function Home(){
 
     if(estaCargando){
         return(
-            <>
+            <>npm run
                 <h1>cargando...</h1>
             </>
         )
